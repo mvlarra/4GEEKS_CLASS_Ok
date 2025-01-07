@@ -8,3 +8,11 @@ Estan las siguientes librerias instaladas: ipykernel nbformat pandas seaborn sci
 Tienen estas carpetas creadas: notebooks src app docs
 Tiene estos archivos creados raw,baking,final
 
+Ene/6/2025:
+Esta pendiente:
+Un notebook para clase 6
+un notebook para clase 7
+etc.
+
+
+
