@@ -56,10 +56,11 @@ El # significa titulo. El ## Subtiluto. Y asi en adelante.
 
 IMPORTANTE:
 ## CUANDO FINALIZO CADA CLASE DEBO HACER LO SIGUIENTE EN LA TERMINAL PARA SUBIR TODOS LOS CAMBIOS:
-PASO 1: git add . # me sube todo lo que encuentra con cambios
-PASO 2: git commit -m "Texto indicando modificaciones"
-PASO 3: git push
-PASO 4: Si la terminal me devuelve un comentario como este, es porque el branch no fue subido aun:
+1. git add . 
+        me sube todo lo que encuentra con cambios que no este subido. Siempre es mas saludable subir lo que sabemos que tiene cambios, ya que sin querer podemos subir algo que no nos interesaba subir.
+2. git commit -m "Texto indicando modificaciones"
+3. git push
+4. Si la terminal me devuelve un comentario como este, es porque el branch no fue subido aun:
 
         "fatal: The current branch 03_probability_clase08 has no upstream branch.
         To push the current branch and set the remote as upstream, use
@@ -68,8 +69,10 @@ PASO 4: Si la terminal me devuelve un comentario como este, es porque el branch 
 
         To have this happen automatically for branches without a tracking upstream, see 'push.autoSetupRemote' in 'git help config'.
 
-debo copiar la linea que sugiere en la terminal. En este ejemplo: (git push --set-upstream origin 03_probability_clase08) 
-PASO 5: git status. Esto debe decir algo como "Your branch is up to date with 'origin/02_Github'. nothing to commit, working tree clean" indicando que todo esta subido.
+        debo copiar la linea que sugiere en la terminal. En este ejemplo: (git push --set-upstream origin 03_probability_clase08) 
+
+5. git status 
+        Esto debe decir algo como "Your branch is up to date with 'origin/02_Github'. nothing to commit, working tree clean" indicando que todo esta subido.
 
 
 
@@ -86,11 +89,9 @@ x. para agregar texto con salto de linea"echo -e "Linea1\nLinea2"
 x. es util usar echo para generar el archivo gitignore echo -e ".venv\n.env" > gitignore
 x. git branch para saber la rama donde estoy parado.
 x. git checkout nos sirve para movernos de rama en rama. Con el -b creo esa rama y me muevo para alli
-
 x. rm -rf nombre de la carpeta borra la carpeta
 x. mkdir -p (make directory) p = parents  para crear carpeta y subdirectorios data/{raw,baking,final}
-
-git status para ver que esta sin commit
+x. git status para ver que esta sin commit
 
 
 "```" backtick se llama este simbolo que sirve para poner un bloque de codigo. 
@@ -142,29 +143,29 @@ un notebook para clase 7
 etc.
 
 # MY NOTES: CLASE 8
-creamos rama nueva:
-git branch: 03_probability
+1. creamos rama nueva:
+        git branch: 03_probability
 
-para ver lista de ramas:
-git branch
+2. para ver lista de ramas:
+        git branch
 
-para movernos a la rama que nececitemos:
-git checkout nombre de la rama
+3. para movernos a la rama que nececitemos:
+        git checkout nombre de la rama
 
-creamos el notebook dentro de la carpeta notebook:
-touch notebooks/03_probability.ipynb
+4. creamos el notebook dentro de la carpeta notebook:
+        touch notebooks/03_probability.ipynb
 
-a la derecha del notebook cambiamos del kernel a entorno venv.
+5. a la derecha del notebook cambiamos del kernel a entorno venv.
 
 
-Si quiero integrar todos los cambios a main:
-git checkout main  
+# Si quiero integrar todos los cambios a main:
+1. git checkout main  
         (para ir a la rama principal)
         Este comando cambia a la rama main. Si ya estás en main, no pasará nada.
         Git verificará si hay cambios no guardados antes de permitir el cambio. Si hay, te pedirá que los guardes o los descartes.
         Resultado: Ahora estás trabajando en la rama main.
 
-Git pull 
+2. Git pull 
         (para ver cambios pendientes) (git pull = git fetch + git merge.)
         Combina dos comandos en uno:
         Primero ejecuta git fetch para descargar los últimos cambios del remoto en origin/main.
@@ -172,26 +173,41 @@ Git pull
         Si no hay conflictos, la rama main local se actualizará con los últimos cambios del remoto.
         Resultado: main está sincronizada con origin/main.
 
-git fetch 
+3. git fetch 
         (Para sincronizar ramas remotas en tu repositorio local)(Si acabas de ejecutar git pull, no es necesario ejecutar git fetch inmediatamente después, ya que git pull ya incluye fetch. Sin embargo, no causa daño si lo haces; simplemente confirma que tienes las referencias remotas actualizadas. 😊)
         Este comando descarga información del repositorio remoto sin fusionarla con tu rama actual.
         Si acabas de hacer git pull, es probable que git fetch no descargue nada nuevo (a menos que hayan ocurrido cambios remotos en ese breve lapso).
         Resultado: Actualiza las referencias remotas, pero no modifica tu rama local.
 
-git branch
+4. git branch
         Este comando muestra todas las ramas locales en tu repositorio.
         Si usas git branch -r, también verás las ramas remotas.
         Después de los pasos anteriores, la rama main local estará sincronizada con origin/main, y git branch mostrará todas las ramas locales existentes.
         Este comando muestra todas las ramas locales en tu repositorio.
         Si usas git branch -r, también verás las ramas remotas.
         Después de los pasos anteriores, la rama main local estará sincronizada con origin/main, y git branch mostrará todas las ramas locales existentes.
-
-
       
-Resultado final:
+5. Resultado final:
         main local y origin/main estarán sincronizados.
         Las referencias remotas estarán actualizadas.
         Verás todas las ramas locales disponibles.
+
+# AL FINALIZAR EL TRABAJO DE UNA RAMA, DEVEMOS INTEGRARLA A LA MAIN. Para esto:
+1. git add notebooks/nombre_de_la_rama
+2. git commits -m "Agregando_Notebook: Nombre_del_Notebook"
+3. git push y si sale error ponemos el comando sugerido. Generalmente es poque no esta la rama creada en el remoto.
+4. Vamos a la pagina de github:
+        4.1 En la tab Code, nos paramos en la rama que queremos integrar, 
+        4.2 Le damos a Contribute
+        4.3 Open pull request
+        4.4 Creamos el pull request
+        4.5 Merge pull request 
+        4.6 Confirm Merge
+
+
+# NUNCA HACER CAMBIOS O AGREGAR CODIGO DESDE LA PAGINA DE GITHUB.com !!!!!!!!!!!!!! TRAE MUCHOS PROBLEMAS DE SINCRONIZACION.
+# SIEMPRE HACERLO DESDE LA MAQUINA REMOTA. SI NO, DEJA DE ENTENDER QUIEN ES EL REMOTO Y QUIEN ES EL LOCAL. El que manda siempre es el remoto.
+
 
 # MY NOTES: CLASE 9 (1/8/2025):
 Hoy vamos a trabajar con un archivo de jupyter
@@ -199,3 +215,7 @@ Hoy vamos a trabajar con un archivo de jupyter
 
 # MY NOTES: CLASE 10 (1/10/2025):
 Primera parte, continuaron con el notebook 4 (Analisis de los pinguinos).
+Segunda parte: Random Variables.
+Ver el codigo que escribieron los compañeros para resolver el ejercicio. Hay algunos muy interesantes.
+
+
