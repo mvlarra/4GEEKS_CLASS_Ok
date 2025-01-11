@@ -31,7 +31,7 @@ El # significa titulo. El ## Subtiluto. Y asi en adelante.
 
 5. Instalamos los paquetes que necesitaremos de python
 ```bash
-        python -m pip install ipykernel nbformat pandas seaborn scikit-learn
+        python -m pip install ipykernel nbformat pandas seaborn scikit-learn plotly
 ```
 
 
@@ -169,4 +169,5 @@ git branch
 Hoy vamos a trabajar con un archivo de jupyter
 
 
-
+# MY NOTES: CLASE 10 (1/10/2025):
+Primera parte, continuaron con el notebook 4 (Analisis de los pinguinos).
