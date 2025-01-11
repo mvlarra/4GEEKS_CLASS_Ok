@@ -158,12 +158,40 @@ a la derecha del notebook cambiamos del kernel a entorno venv.
 
 
 Si quiero integrar todos los cambios a main:
-git checkout main  (para ir a la rama principal)
-Git pull (para ver cambios pendientes)
-git fetch
+git checkout main  
+        (para ir a la rama principal)
+        Este comando cambia a la rama main. Si ya estás en main, no pasará nada.
+        Git verificará si hay cambios no guardados antes de permitir el cambio. Si hay, te pedirá que los guardes o los descartes.
+        Resultado: Ahora estás trabajando en la rama main.
+
+Git pull 
+        (para ver cambios pendientes) (git pull = git fetch + git merge.)
+        Combina dos comandos en uno:
+        Primero ejecuta git fetch para descargar los últimos cambios del remoto en origin/main.
+        Luego ejecuta git merge para aplicar esos cambios a tu rama local main.
+        Si no hay conflictos, la rama main local se actualizará con los últimos cambios del remoto.
+        Resultado: main está sincronizada con origin/main.
+
+git fetch 
+        (Para sincronizar ramas remotas en tu repositorio local)(Si acabas de ejecutar git pull, no es necesario ejecutar git fetch inmediatamente después, ya que git pull ya incluye fetch. Sin embargo, no causa daño si lo haces; simplemente confirma que tienes las referencias remotas actualizadas. 😊)
+        Este comando descarga información del repositorio remoto sin fusionarla con tu rama actual.
+        Si acabas de hacer git pull, es probable que git fetch no descargue nada nuevo (a menos que hayan ocurrido cambios remotos en ese breve lapso).
+        Resultado: Actualiza las referencias remotas, pero no modifica tu rama local.
+
 git branch
+        Este comando muestra todas las ramas locales en tu repositorio.
+        Si usas git branch -r, también verás las ramas remotas.
+        Después de los pasos anteriores, la rama main local estará sincronizada con origin/main, y git branch mostrará todas las ramas locales existentes.
+        Este comando muestra todas las ramas locales en tu repositorio.
+        Si usas git branch -r, también verás las ramas remotas.
+        Después de los pasos anteriores, la rama main local estará sincronizada con origin/main, y git branch mostrará todas las ramas locales existentes.
 
 
+      
+Resultado final:
+        main local y origin/main estarán sincronizados.
+        Las referencias remotas estarán actualizadas.
+        Verás todas las ramas locales disponibles.
 
 # MY NOTES: CLASE 9 (1/8/2025):
 Hoy vamos a trabajar con un archivo de jupyter
