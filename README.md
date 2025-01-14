@@ -200,12 +200,18 @@ git config --get branch.main.merge
 
 
 # NOTAS IMPORTANTES (OJO!!!!)
-### NUNCA HACER CAMBIOS O AGREGAR CODIGO DESDE LA PAGINA DE GITHUB.com !!!!!!!!!!!!!! TRAE MUCHOS PROBLEMAS DE SINCRONIZACION. SIEMPRE HACERLO DESDE LA MAQUINA REMOTA. SI NO, DEJA DE ENTENDER QUIEN ES EL REMOTO Y QUIEN ES EL LOCAL. El que manda siempre es el remoto.
+### NUNCA HACER CAMBIOS O AGREGAR CODIGO DESDE LA PAGINA DE GITHUB.com !
+TRAE MUCHOS PROBLEMAS DE SINCRONIZACION. SIEMPRE HACERLO DESDE LA MAQUINA REMOTA. SI NO, DEJA DE ENTENDER QUIEN ES EL REMOTO Y QUIEN ES EL LOCAL. El que manda siempre es el remoto.
 
-### Important note: CHECKOUT command. OJO !!!
+### BEFORE PERFORM A CHECKOUT
 If there are any uncommitted changes when you run git checkout, GIT will behave very strangely. 
 The strangeness is predictable and sometimes useful, but it is best to avoid it. 
 All you need to do, of course, is commit all the new changes before checking out the new head
+
+### BEFORE PERFORM A MERGE
+GIT can get very confused if there are uncommitted changes in the files when you ask it to perform a merge. 
+So, make sure to commit whatever changes you have made so far before you merge.
+
 
 # MY NOTES: CLASE 8
 1. creamos rama nueva:
