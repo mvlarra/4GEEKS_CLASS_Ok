@@ -229,5 +229,8 @@ Ver el codigo que escribieron los compañeros para resolver el ejercicio. Hay al
 
 # MY NOTES: CLASE 11 (1/13/2025):
 excalidraw es una pagina que permite hacer graficas
-tambien hay un plug inn que permite usarlo en codespace
+tambien hay un plug inn que permite usarlo en codespace. 
+es lo que usa el profesor como pizarra.
+
+
 
