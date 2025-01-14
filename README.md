@@ -142,20 +142,6 @@ Un notebook para clase 6
 un notebook para clase 7
 etc.
 
-# MY NOTES: CLASE 8
-1. creamos rama nueva:
-        git branch: 03_probability
-
-2. para ver lista de ramas:
-        git branch
-
-3. para movernos a la rama que nececitemos:
-        git checkout nombre de la rama
-
-4. creamos el notebook dentro de la carpeta notebook:
-        touch notebooks/03_probability.ipynb
-
-5. a la derecha del notebook cambiamos del kernel a entorno venv.
 
 
 # Si quiero integrar todos los cambios a main:
@@ -213,9 +199,28 @@ git config --get branch.main.merge
 5. git pull: colocamos git pull en la terminal del espcio remoto, para sincronizar ambos espacios: remoto y local. 
 
 
+# NOTAS IMPORTANTES (OJO!!!!)
+### NUNCA HACER CAMBIOS O AGREGAR CODIGO DESDE LA PAGINA DE GITHUB.com !!!!!!!!!!!!!! TRAE MUCHOS PROBLEMAS DE SINCRONIZACION. SIEMPRE HACERLO DESDE LA MAQUINA REMOTA. SI NO, DEJA DE ENTENDER QUIEN ES EL REMOTO Y QUIEN ES EL LOCAL. El que manda siempre es el remoto.
 
-# NUNCA HACER CAMBIOS O AGREGAR CODIGO DESDE LA PAGINA DE GITHUB.com !!!!!!!!!!!!!! TRAE MUCHOS PROBLEMAS DE SINCRONIZACION.
-# SIEMPRE HACERLO DESDE LA MAQUINA REMOTA. SI NO, DEJA DE ENTENDER QUIEN ES EL REMOTO Y QUIEN ES EL LOCAL. El que manda siempre es el remoto.
+### Important note: CHECKOUT command. OJO !!!
+If there are any uncommitted changes when you run git checkout, GIT will behave very strangely. 
+The strangeness is predictable and sometimes useful, but it is best to avoid it. 
+All you need to do, of course, is commit all the new changes before checking out the new head
+
+# MY NOTES: CLASE 8
+1. creamos rama nueva:
+        git branch: 03_probability
+
+2. para ver lista de ramas:
+        git branch
+
+3. para movernos a la rama que nececitemos:
+        git checkout nombre de la rama
+
+4. creamos el notebook dentro de la carpeta notebook:
+        touch notebooks/03_probability.ipynb
+
+5. a la derecha del notebook cambiamos del kernel a entorno venv.
 
 
 # MY NOTES: CLASE 9 (1/8/2025):
