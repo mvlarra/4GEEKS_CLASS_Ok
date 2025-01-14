@@ -194,6 +194,11 @@ git config --get branch.main.merge
         Las referencias remotas estarán actualizadas. 
         Verás todas las ramas locales disponibles.
 
+# AL INICIAR CADA CLASE
+1. ACTIVAMOS EL ENTORNO VIRTUAL
+2. HACEMOS UN GIT STATUS PARA ASEGURARNOS QUE TODO ESTE OK Y NO HAYA NINGUN CONFLICTO
+
+
 # AL FINALIZAR EL TRABAJO DE UNA RAMA, DEVEMOS INTEGRARLA A LA MAIN. Para esto:
 1. git add notebooks/nombre_de_la_rama
 2. git commits -m "Agregando_Notebook: Nombre_del_Notebook"
@@ -223,4 +228,6 @@ Segunda parte: Random Variables.
 Ver el codigo que escribieron los compañeros para resolver el ejercicio. Hay algunos muy interesantes.
 
 # MY NOTES: CLASE 11 (1/13/2025):
+excalidraw es una pagina que permite hacer graficas
+tambien hay un plug inn que permite usarlo en codespace
 
