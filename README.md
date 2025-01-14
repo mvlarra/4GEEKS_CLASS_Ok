@@ -165,7 +165,9 @@ etc.
         Git verificará si hay cambios no guardados antes de permitir el cambio. Si hay, te pedirá que los guardes o los descartes.
         Resultado: Ahora estás trabajando en la rama main.
 
-2. Git pull 
+2. git config --get branch.main.remote
+git config --get branch.main.merge
+ 
         (para ver cambios pendientes) (git pull = git fetch + git merge.)
         Combina dos comandos en uno:
         Primero ejecuta git fetch para descargar los últimos cambios del remoto en origin/main.
@@ -189,13 +191,13 @@ etc.
       
 5. Resultado final:
         main local y origin/main estarán sincronizados.
-        Las referencias remotas estarán actualizadas.
+        Las referencias remotas estarán actualizadas. 
         Verás todas las ramas locales disponibles.
 
 # AL FINALIZAR EL TRABAJO DE UNA RAMA, DEVEMOS INTEGRARLA A LA MAIN. Para esto:
 1. git add notebooks/nombre_de_la_rama
 2. git commits -m "Agregando_Notebook: Nombre_del_Notebook"
-3. git push y si sale error ponemos el comando sugerido. Generalmente es poque no esta la rama creada en el remoto.
+3. git push y si sale error ponemos el comando sugerido. Generalmente  es poque no esta la rama creada en el remoto.
 4. Vamos a la pagina de github:
         4.1 En la tab Code, nos paramos en la rama que queremos integrar, 
         4.2 Le damos a Contribute
@@ -203,6 +205,8 @@ etc.
         4.4 Creamos el pull request
         4.5 Merge pull request 
         4.6 Confirm Merge
+5. git pull: colocamos git pull en la terminal del espcio remoto, para sincronizar ambos espacios: remoto y local. 
+
 
 
 # NUNCA HACER CAMBIOS O AGREGAR CODIGO DESDE LA PAGINA DE GITHUB.com !!!!!!!!!!!!!! TRAE MUCHOS PROBLEMAS DE SINCRONIZACION.
@@ -218,4 +222,5 @@ Primera parte, continuaron con el notebook 4 (Analisis de los pinguinos).
 Segunda parte: Random Variables.
 Ver el codigo que escribieron los compañeros para resolver el ejercicio. Hay algunos muy interesantes.
 
+# MY NOTES: CLASE 11 (1/13/2025):
 
