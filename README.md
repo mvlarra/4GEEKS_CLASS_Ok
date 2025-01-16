@@ -213,6 +213,160 @@ GIT can get very confused if there are uncommitted changes in the files when you
 So, make sure to commit whatever changes you have made so far before you merge.
 
 
+### REQUIREMENTS.TXT (Que hace el comando: python -m pip freeze > requirements.txt)
+Este comando es ampliamente utilizado en proyectos de Python para documentar y gestionar dependencias.
+1. Desglose del comando
+        python -m pip freeze:
+
+        python -m: Le dice a Python que ejecute un módulo como un script. En este caso, el módulo es pip.
+        pip freeze: Este comando genera una lista de todas las bibliotecas instaladas en el entorno actual de Python, junto con sus versiones exactas.
+
+        Esto asegura que cualquier persona que trabaje en el proyecto pueda instalar exactamente las mismas versiones de las bibliotecas
+
+2. "> requirements.txt":
+
+        >: Es un operador de redirección en Shell que escribe la salida del comando en un archivo.
+        requirements.txt: Es el nombre del archivo donde se guarda la lista generada por pip freeze.
+
+        Al ejecutar el comando, la salida de pip freeze se guarda en un archivo llamado requirements.txt en lugar de mostrarse en la consola.
+
+3. Pare que sirve?
+        1. Documentar dependencias:
+        El archivo requirements.txt sirve como un registro de todas las bibliotecas y sus versiones usadas en el proyecto. Esto es útil para compartir el entorno de desarrollo con otros.
+
+        2. Reproducir el entorno:
+        Cualquier persona que descargue el proyecto puede instalar las mismas dependencias ejecutando: pip install -r requirements.txt
+        Esto asegura que el proyecto se comporte igual en diferentes máquinas.
+
+        3.Manejo de versiones:
+        Garantiza que las versiones de las bibliotecas no cambien inesperadamente, evitando problemas de compatibilidad.
+
+4. Ejemplo de uso en un flujo de trabajo
+        1. Tienes un proyecto de Python y quieres registrar sus dependencias. 
+        Ejecutas: 
+        python -m pip freeze > requirements.txt
+
+        2. El archivo requirements.txt generado podría verse así:
+        flask==2.1.2
+        requests==2.26.0
+        numpy==1.21.2
+
+        3. Compartes tu proyecto con otros desarrolladores. 
+        Ellos ejecutan: 
+        pip install -r requirements.txt
+        Esto instala las mismas versiones de las bibliotecas listadas.
+
+5. Recomendaciones
+        1. Usa entornos virtuales:
+        Es mejor ejecutar este comando dentro de un entorno virtual (venv o virtualenv) para capturar solo las dependencias del proyecto y no las de todo el sistema.
+
+        2. Actualiza regularmente requirements.txt:
+        Cada vez que agregues nuevas bibliotecas o actualices versiones, vuelve a ejecutar el comando python -m pip freeze > requirements.txt. 
+        Este comando sobrescribirá el contenido del archivo requirements.txt con la lista actualizada de todas las bibliotecas y versiones instaladas en tu entorno.
+
+        3. Antes de ejecutar el comando:
+        Asegúrate de que todas las nuevas bibliotecas estén instaladas correctamente en tu entorno. Por ejemplo:
+                pip install nombre-de-la-libreria
+
+        4. Después de actualizar requirements.txt:
+        Si trabajas en un equipo o tienes un repositorio de Git, recuerda confirmar (commit) los cambios en el archivo para que todos los miembros del equipo tengan acceso a las versiones actualizadas.
+                git add requirements.txt
+                git commit -m "Update requirements.txt with latest dependencies"
+                git push
+
+        5. Usa pip freeze con entornos virtuales:
+        Si usas un entorno virtual (venv o similar), activa el entorno antes de ejecutar el comando para evitar incluir bibliotecas globales no relacionadas con tu proyecto.
+        Ejemplo en un entorno virtual activado:
+                source .venv/bin/activate  # En Linux/Mac
+                .venv\Scripts\activate     # En Windows
+                python -m pip freeze > requirements.txt
+
+        6. Opcional: Comprobación de diferencias antes de actualizar
+        Si deseas ver qué ha cambiado en tus dependencias antes de actualizar requirements.txt, puedes usar diff o git diff:
+                diff requirements.txt <(python -m pip freeze)
+
+        O, si trabajas con Git y el archivo está versionado:
+                git diff requirements.txt
+
+        Esto te permitirá decidir si realmente necesitas actualizar el archivo.
+
+
+# MY NOTES: CLASE 7
+En la segunda parte de la clase, haremos el projecto de la leccion de github llamado "Fix the Misspell Challenge"
+Lo haremos con las indicaciones que nos da el profesor que no son exactamente las que pone la plataforma.
+para esto generaremos un script de shell con el comando touch myscript.sh y lo editaremos.
+1. Linea 1: ponemos lo siguiente, no importa el porque: #!/usr/bin/env bash
+2. Linea 2: ponemos" echo "mi primer script"
+3. Luego lo corremos desde la terminal con: sh myscript.sh
+4. Ahora vamos a hacer una edicion en el script, copiando el valor del working directory.
+        Para esto en la tercer linea del script creamos una variable: 
+        myworkingdirectory=$(pwd)
+        Para llamar a un comando en bash debemos usar el simbolo "$" y colocar entre parentesis el comando
+        En bash a diferencia de python, las asignaciones de variables se hacen sin espacios.
+
+5. Linea 4: generare un sentencia para imprimirla. Para esto escribo:
+        echo $(myworkingdirectory)
+        De esta forma llamo a la variable. Es decir he tomado la variable de comando pwd y la he imprimido con el comando echo
+
+
+6. Luego corro el script desde la terminal con: sh myscript.sh
+
+7. Linea 5: Ahora le vamos a pedir al shell, que ejecute un comando de python
+        python -m pip freeze > requirements.txt
+
+8. Guardamos el archivo
+9. Corremos el script desde la terminal con: sh myscript.sh
+
+Con esto vemos que puedo encadenar ejecuciones de bash y de python en una sola linea.
+Lo cual es muy util ya que puedo tener control sobre lo que veo con el bash, y lo que ejecuto.
+A la izquierda, en el explorador vemos que se creo el archivo requirements.txt.
+Este archivo incluye todas las librerias y sus versiones, que se han instalado en mi entorno.
+
+10. Linea 6: Vamos a agregar esta linea para crear una variable con el comando que activa el entorno virtual venv.
+        activation="/.venv/bin/activate"
+11. Linea 7: Generamos la linea source. En shell hay que darle la ruta completa del directorio del entorno que quiero activar.
+        source $(myworkingdirectory)$(activation) 
+
+12. Guardamos el archivo
+
+13. Ahora vamos a la terminal, y ya no vamos a escribir sh para correr el script. Ya que cuando escribimos sh todo ocurre en una ejecucion virtual.
+En cambio, para correr el script escribiremos:
+        source myscript.sh
+
+        
+
+14. Conclucion 1:
+Esto nos permite automatizar con un script tareas repetitivas que solemos hacer al trabajar con python:
+        1. crear carpetas, archivos
+        2. Activar entornos
+        3. definier Librerias fijas para el entorno. 
+        4. podriamos crear el archvo venv. etc.
+Eso es lo bueno de los scripts, ya que lo que hacen es orquestan la ejecucion de comandos combinados de python, y asi automatizar un monton de cosas.
+
+
+15. Vamos a crear un archivo script de python para poder ejecutarlo y editarlo. Para esto escribimos en la terminal:
+        touch script.py
+16. Linea 1: i = 3
+17. Linea 2: print(f"i al cuadrado es:(i*i)")
+18. Linea 3: mylist = [1,2,3,4]
+19. Linea siguientes: hacemos un for que imprima un elemento a la vez
+20. Guardamos el archivo.
+21. Lo corremos(ejecutamos) desde la terminal con: python script.py 
+
+22. Como hacemos para llamar a un script y ejecutarlo dentro de un bash?
+23. Vamos al script que hemos hecho en shell (myscript.sh)
+24. Comentamos la linea que tiene el source, ya que el entorno virtual ya lo tenemos activo.
+25. Linea 8: escribimos el comando que corre el script de python con:
+        python script.py
+26. Guardamos
+27. En la terminal corremos el script de shell con:
+        source myscript.sh
+
+28. Conclusion 2:
+Con esto queda demostrado que en un mismo script de shell se pueden correr comandos de bash, y correr scripts de python que incluyan codigos que hacen distintas tareas.
+Todo esto ejecutandose de forma automatizada. 
+
+
 # MY NOTES: CLASE 8
 1. creamos rama nueva:
         git branch: 03_probability
