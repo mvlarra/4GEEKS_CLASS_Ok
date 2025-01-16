@@ -200,6 +200,10 @@ git config --get branch.main.merge
 
 
 # NOTAS IMPORTANTES (OJO!!!!)
+
+### JAMAS SE TRABAJA EN MAIN.
+SE TRABAJA EN LAS RAMAS, Y LUEGO SE INTEGRAN A MAIN
+
 ### NUNCA HACER CAMBIOS O AGREGAR CODIGO DESDE LA PAGINA DE GITHUB.com !
 TRAE MUCHOS PROBLEMAS DE SINCRONIZACION. SIEMPRE HACERLO DESDE LA MAQUINA REMOTA. SI NO, DEJA DE ENTENDER QUIEN ES EL REMOTO Y QUIEN ES EL LOCAL. El que manda siempre es el remoto.
 
@@ -398,4 +402,11 @@ tambien hay un plug inn que permite usarlo en codespace.
 es lo que usa el profesor como pizarra.
 
 
+# MY NOTES: CLASE 12 (1/15/2025):
+La clase de hoy veremos Hypothesis Testing
+crearemos una nueva rama para la clase de hoy
+JAMAS SE TRABAJA EN MAIN.
+SE TRABAJA EN LAS RAMAS, Y LUEGO SE INTEGRAN EN MAIN
+Me fui en el corte.
+Repasar clase porque no entendi nada.
 
