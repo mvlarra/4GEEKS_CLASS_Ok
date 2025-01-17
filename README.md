@@ -10,17 +10,35 @@ El # significa titulo. El ## Subtiluto. Y asi en adelante.
 
 1. Ir a Extenciones, e instalar python y jupyter
 
-2. Creamos nuestro entorno virtual llamado "venv" y lo activamos. 
-   Aegurandonos que quedo activado al ver que en la terminal la linea de comandos comienza con "(.venv)"
+2. 1RO: Creamos nuestro entorno virtual llamado "venv"
+        "python -m":    indica que cargue el modulo de python
+        "venv":         genera la carpeta "venv" donde se va a cargar ese modulo
+        ".venv":        Como es una carpeta de sistema la idea es que este oculta. 
+                        En lynux, que es el sistema operativo que tienen las maquinas virtuales de codespace, 
+                        todo lo que empieza con "." son archivos o carpetas ocultos. 
+          
 ```bash
         python -m venv .venv
+```
+
+   2DO: Lo activamos. Sabemos que quedo activado al ver que en la terminal la linea de comandos comienza con "(.venv)"
+        "source": Comando utilizado para ejecutar / correr un script de bash. Puede terminar en sh
+
+```bash
         source .venv/bin/activate
 ```
 
-3. Crear el archivo gitignore con agregando estas dos lineas en el archivo
-```bash
-        echo -e ".venv\n.env" > gitignore
-```
+3. Crear el archivo gitignore,
+        Para evitar que git haga tracking de la carpeta del entorno virtual, Ya que nosotros queremos que git haga seguimiento de codigo, y no de paquetes.
+        Para esto es necesario agregar manualmente estas dos lineas en el archivo:
+                Linea 1: .venv          # Nombre de la carpeta que NO queremos que se haga tracking. Esta carpeta es un entorno virtual.
+                Linea 2: .env           # Nombre de la carpeta donde guardaremos variables de entorno cuando las necesitemos.
+
+        Otra forma de crear el archivo gitignore, es con el comando echo, que lo crea y le carga ambas lineas dentro:
+
+        ```bash
+                echo -e ".venv\n.env" > gitignore
+        ```
      
 4. Hacemos commit en la rama main, solo del archivo gitignore        
 ```bash       
@@ -29,10 +47,30 @@ El # significa titulo. El ## Subtiluto. Y asi en adelante.
         git push
 ```
 
-5. Instalamos los paquetes que necesitaremos de python
+5. Instalamos los paquetes / librerias que necesitaremos de python. Hay dos formas de hacerlo.
+
+(1) Una forma: con el comando pip
 ```bash
         python -m pip install ipykernel nbformat pandas seaborn scikit-learn plotly
 ```
+
+(2) Otra forma: con el archivo requirements.txt
+        Este archivo se puede generar una vez que las librerias ya fueron instaladas.
+        Este archivo tiene dentro el comando pip intall, y luego detalla todas las librerias que necesitamos, incluyendo sus versiones, y separandolas por categorias.
+        En este caso, el comando seria:
+
+        ```bash
+        python -m pip install -r requirements.txt
+        ```
+
+        "python -m":    Llama al modulo pip, que es un instalador de paquetes
+        "intall":       Luego del install le indicamos a ese modulo, que paquetes nos interesa que instale listandoselos, 
+                        o de lo contrario, refiriendonos a un txt que incluye esa lista. 
+                        Por convenvion se le llama "requirements.txt". 
+                        Es buena practica, que siempre que generemos un entonrno virtual, tambien generemos un archivo "requirements.txt",
+                        para que al utilizarlo otra persona, se instalen exactamente las mismas librerias que utilizamos nosotros, a los efecectos de reproducibilidad.
+        
+
 
 
 7. Crear Carpetas de Trabajo
@@ -41,10 +79,22 @@ El # significa titulo. El ## Subtiluto. Y asi en adelante.
         mkdir -p data/{raw,baking,final}
 ```
 
-8. Editar un archivo
+8. Generamos los archivos que necesitemos con el comando touch. Ejemplo, creamos un nuevo notebook dentro de la carpeta notebooks. 
+        Importante!!!   
+        Recordar seleccionar el kernel, (arriba a la derecha debemos seleccionar el entorno virtual que creamos = venv)
+        Recordar como primer paso, importar dentro del notebook, las librerias que necesitemos. 
+        Las mismas deben estar incluidas en el archivo requirements.
 ```bash
-        touch mitexto.txt
-        nano mitexto.txt
+        # Ejemplo:
+        import pandas as pd # libreria para manipulacion de datos mediante data frames
+        import numpy as np # libreria para manipulacion de datos mediantes matrices
+        import matplotlib.pyplot as plt # libreria para manipulacion de graficos
+        import seaborn as sns # pero esa libreria no esta en requirements asi que no la ponemos no la vamos a usar.
+```
+
+
+```bash
+        touch Notebooks/Project_A.txt  
 ```
 
 9. Agregamos todas las carpetas git add
@@ -299,6 +349,17 @@ Este comando es ampliamente utilizado en proyectos de Python para documentar y g
         Esto te permitirá decidir si realmente necesitas actualizar el archivo.
 
 
+# ⭐ TIPS ⭐
+
+1. Imprimir resultados con texto usando f string:
+        Para hacer el resultado mas legible, le agregamos separador de miles, (la coma sera el que usaremos por convencion), 
+        colocando lo siguiente luego del nombre de mi variable.
+        
+2. Redondear resultados: 
+        Supongamos que suma es el resultado que retorna determinada funcion que definimos. Para que no tenga decimales debemos colocarlo entre parentesis curbos, y luego de los dos puntos, colocar la cantidad de decimales. print(f"Mi Resultado es: {suma:,}")
+       
+
+
 # MY NOTES: CLASE 7
 En la segunda parte de la clase, haremos el projecto de la leccion de github llamado "Fix the Misspell Challenge"
 Lo haremos con las indicaciones que nos da el profesor que no son exactamente las que pone la plataforma.
@@ -389,6 +450,10 @@ Todo esto ejecutandose de forma automatizada.
         touch notebooks/03_probability.ipynb
 
 5. a la derecha del notebook cambiamos del kernel a entorno venv.
+
+
+# MY NOTES: CLASE 5 (12/27/2024): OPERACIONES CON ARRAYS Y DATAFRAMES | PREWORK.
+Vemos herramientas para entregar el projecto del pre-work.
 
 
 # MY NOTES: CLASE 9 (1/8/2025):
