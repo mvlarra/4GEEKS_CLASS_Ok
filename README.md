@@ -44,7 +44,7 @@ El # significa titulo. El ## Subtiluto. Y asi en adelante.
 8. Editar un archivo
 ```bash
         touch mitexto.txt
-        manomitexto.txt
+        mano mitexto.txt
 ```
 
 9. Agregamos todas las carpetas git add
