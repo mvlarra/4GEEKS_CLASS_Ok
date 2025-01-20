@@ -36,9 +36,9 @@ El # significa titulo. El ## Subtiluto. Y asi en adelante.
 
         Otra forma de crear el archivo gitignore, es con el comando echo, que lo crea y le carga ambas lineas dentro:
 
-        ```bash
+```bash
                 echo -e ".venv\n.env" > gitignore
-        ```
+```
      
 4. Hacemos commit en la rama main, solo del archivo gitignore        
 ```bash       
@@ -59,10 +59,9 @@ El # significa titulo. El ## Subtiluto. Y asi en adelante.
         Este archivo tiene dentro el comando pip intall, y luego detalla todas las librerias que necesitamos, incluyendo sus versiones, y separandolas por categorias.
         En este caso, el comando seria:
 
-        ```bash
+```bash
         python -m pip install -r requirements.txt
-        ```
-
+```
         "python -m":    Llama al modulo pip, que es un instalador de paquetes
         "intall":       Luego del install le indicamos a ese modulo, que paquetes nos interesa que instale listandoselos, 
                         o de lo contrario, refiriendonos a un txt que incluye esa lista. 
