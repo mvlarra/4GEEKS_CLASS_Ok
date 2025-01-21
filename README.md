@@ -173,6 +173,18 @@ corro el codigo
 
 python -m pip freeze > requirements.txt
 
+Esto estaba en el requirements del projecto del pre-work:
+pip install -r requirements.txt:
+
+    # Base ----------------------------------------
+    #pandas>=1.5.3
+    #numpy>=1.24.2
+    #opencv-python>=4.1.2
+    #matplotlib>=3.7.0
+    #ipyleaflet>=0.14.0
+    #jupyter_contrib_nbextensions
+    # Machine learning ----------------------------
+    #scikit-learn
 
 
 
