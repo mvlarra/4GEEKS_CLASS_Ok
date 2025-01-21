@@ -478,3 +478,7 @@ SE TRABAJA EN LAS RAMAS, Y LUEGO SE INTEGRAN EN MAIN
 Me fui en el corte.
 Repasar clase porque no entendi nada.
 
+# MY NOTES: CLASE 13 (1/17/2025):
+No estuve en esta clase, pero vi la grabacion hasta el minuto 28 aprox.
+Y fui colocando las notas en el notebook 07_algorithm_optimization
+Continuar hasta finalizar la clase.
