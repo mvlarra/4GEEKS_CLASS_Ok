@@ -494,3 +494,7 @@ Repasar clase porque no entendi nada.
 No estuve en esta clase, pero vi la grabacion hasta el minuto 28 aprox.
 Y fui colocando las notas en el notebook 07_algorithm_optimization
 Continuar hasta finalizar la clase.
+
+# MY NOTES: CLASE 14 (1/20/2025):
+Hoy veremos Machine Learning Operations (MLOPS)
+Trabajaremos en el Notebook 08_MLOPS
