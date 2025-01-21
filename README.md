@@ -494,6 +494,13 @@ Repasar clase porque no entendi nada.
 No estuve en esta clase, pero vi la grabacion hasta el minuto 28 aprox.
 Y fui colocando las notas en el notebook 07_algorithm_optimization
 Continuar hasta finalizar la clase.
+Imagenes que compartio el profesor por Slack:
+
+![alt text](<image (1).png>)
+
+![alt text](<image (2).png>)
+
+![alt text](<image (3).png>)
 
 # MY NOTES: CLASE 14 (1/20/2025):
 Hoy veremos Machine Learning Operations (MLOPS)
