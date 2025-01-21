@@ -505,3 +505,6 @@ Imagenes que compartio el profesor por Slack:
 # MY NOTES: CLASE 14 (1/20/2025):
 Hoy veremos Machine Learning Operations (MLOPS)
 Trabajaremos en el Notebook 08_MLOPS
+Me fui casi al principio de la clase.
+No integre la rama 08 a la main. Asi que en esta rama estan los ultimos updates.
+escuchar la grabacion y completar, para luego integrar.
