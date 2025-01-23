@@ -262,27 +262,74 @@ git config --get branch.main.merge
 
 # NOTAS IMPORTANTES (OJO!!!!)
 
-### JAMAS SE TRABAJA EN MAIN.
+
+### 🧡 COMO TRABAJRA LOS EJERCICIOS Y PROYECTOS DE 4GEEKS:
+
+Dado que es un repositorio con ejercicios de Python de una academia y participas como estudiante, lo más probable es que necesites hacer un fork del repositorio. Aquí está el porqué y los pasos:
+¿Por qué necesitas hacer un fork?
+
+1. No tienes permisos para escribir en el repositorio original de la academia.
+        Si haces un clone, no podrás enviar tus cambios al repositorio de la academia.
+
+2. Tu trabajo debe mantenerse separado.
+        Con un fork, puedes modificar los ejercicios libremente sin afectar el repositorio original.
+
+3. Enviar tus soluciones o cambios.
+        Después de resolver los ejercicios, puedes usar un pull request si necesitas enviar tus soluciones al repositorio de la academia (si es requerido).
+
+#### PASOS SUGERIDOS:
+
+1. Hacer un fork del repositorio de la academia:
+        Ve al repositorio de la academia en GitHub.
+        Haz clic en el botón Fork en la esquina superior derecha. Esto creará una copia en tu cuenta de GitHub.
+
+2. Clonar tu fork en tu máquina local:
+        Una vez que tengas el fork, copia la URL de tu repositorio (que está en tu cuenta, no el original).
+        Ejecuta en la terminal: git clone <URL-de-tu-fork>
+        Esto descargará el repositorio a tu computadora.
+
+3. Resolver los ejercicios:
+        Abre el repositorio local y realiza los cambios necesarios (resuelve los ejercicios).
+
+4. Enviar los cambios a tu fork en GitHub:
+        Haz lo siguiente para subir tus cambios:
+
+                git add .
+                git commit -m "Resueltos ejercicios de Python"
+                git push origin main
+
+5. (Opcional) Crear un pull request a la academia:
+        Si la academia requiere que envíes tus soluciones, ve a tu repositorio en GitHub y crea un pull request al repositorio original.
+
+#### SI CLONAS DIRECTAMENTE EL RESPOSITORIO DE LA ACADEMIA ...
+
+Esto funcionará si solo necesitas resolver los ejercicios localmente sin necesidad de subir tus cambios a GitHub. Pero recuerda:
+        
+1. Los cambios quedarán solo en tu computadora.
+2. No podrás sincronizar tu progreso con GitHub ni colaborar fácilmente.
+
+
+### 🧡 JAMAS SE TRABAJA EN MAIN.
 SE TRABAJA EN LAS RAMAS, Y LUEGO SE INTEGRAN A MAIN
 
-### NUNCA HACER CAMBIOS O AGREGAR CODIGO DESDE LA PAGINA DE GITHUB.com !
+### 🧡 NUNCA HACER CAMBIOS O AGREGAR CODIGO DESDE LA PAGINA DE GITHUB.com !
 TRAE MUCHOS PROBLEMAS DE SINCRONIZACION. SIEMPRE HACERLO DESDE LA MAQUINA REMOTA. SI NO, DEJA DE ENTENDER QUIEN ES EL REMOTO Y QUIEN ES EL LOCAL. El que manda siempre es el remoto.
 
 
-### SI LAS RAMAS LAS INTEGRO DESDE GENERANDO UN PULL REQUEST DESDE LA WEB DE GITHUB, LUEGO DE TERMINAR EL PROCESO DEBO IR A LA TERIMAN, PARARME EN LA RAMA MAIN, Y HACER UN "git pull origin main"
+### 🧡 SI LAS RAMAS LAS INTEGRO DESDE GENERANDO UN PULL REQUEST DESDE LA WEB DE GITHUB, LUEGO DE TERMINAR EL PROCESO DEBO IR A LA TERIMAN, PARARME EN LA RAMA MAIN, Y HACER UN "git pull origin main"
 SI NO HAGO ESTO, LA MAIN QUEDARA DESACTUALIZADA EN EL REMOTO.
 
-### BEFORE PERFORM A CHECKOUT
+### 🧡 BEFORE PERFORM A CHECKOUT
 If there are any uncommitted changes when you run git checkout, GIT will behave very strangely. 
 The strangeness is predictable and sometimes useful, but it is best to avoid it. 
 All you need to do, of course, is commit all the new changes before checking out the new head
 
-### BEFORE PERFORM A MERGE
+### 🧡 BEFORE PERFORM A MERGE
 GIT can get very confused if there are uncommitted changes in the files when you ask it to perform a merge. 
 So, make sure to commit whatever changes you have made so far before you merge.
 
 
-### REQUIREMENTS.TXT (Que hace el comando: python -m pip freeze > requirements.txt)
+### 🧡 REQUIREMENTS.TXT (Que hace el comando: python -m pip freeze > requirements.txt)
 Este comando es ampliamente utilizado en proyectos de Python para documentar y gestionar dependencias.
 1. Desglose del comando
         python -m pip freeze:
@@ -300,6 +347,7 @@ Este comando es ampliamente utilizado en proyectos de Python para documentar y g
         Al ejecutar el comando, la salida de pip freeze se guarda en un archivo llamado requirements.txt en lugar de mostrarse en la consola.
 
 3. Pare que sirve?
+
         1. Documentar dependencias:
         El archivo requirements.txt sirve como un registro de todas las bibliotecas y sus versiones usadas en el proyecto. Esto es útil para compartir el entorno de desarrollo con otros.
 
@@ -326,6 +374,7 @@ Este comando es ampliamente utilizado en proyectos de Python para documentar y g
         Esto instala las mismas versiones de las bibliotecas listadas.
 
 5. Recomendaciones
+
         1. Usa entornos virtuales:
         Es mejor ejecutar este comando dentro de un entorno virtual (venv o virtualenv) para capturar solo las dependencias del proyecto y no las de todo el sistema.
 
@@ -371,7 +420,7 @@ Este comando es ampliamente utilizado en proyectos de Python para documentar y g
        
 
 
-# MY NOTES: CLASE 7
+# 📒 MY NOTES: CLASE 7
 En la segunda parte de la clase, haremos el projecto de la leccion de github llamado "Fix the Misspell Challenge"
 Lo haremos con las indicaciones que nos da el profesor que no son exactamente las que pone la plataforma.
 para esto generaremos un script de shell con el comando touch myscript.sh y lo editaremos.
@@ -447,7 +496,7 @@ Con esto queda demostrado que en un mismo script de shell se pueden correr coman
 Todo esto ejecutandose de forma automatizada. 
 
 
-# MY NOTES: CLASE 8
+# 📒 MY NOTES: CLASE 8
 1. creamos rama nueva:
         git branch: 03_probability
 
@@ -463,26 +512,28 @@ Todo esto ejecutandose de forma automatizada.
 5. a la derecha del notebook cambiamos del kernel a entorno venv.
 
 
-# MY NOTES: CLASE 5 (12/27/2024): OPERACIONES CON ARRAYS Y DATAFRAMES | PREWORK.
+
+
+# 📒 MY NOTES: CLASE 5 (12/27/2024): OPERACIONES CON ARRAYS Y DATAFRAMES | PREWORK.
 Vemos herramientas para entregar el projecto del pre-work.
 
 
-# MY NOTES: CLASE 9 (1/8/2025):
+# 📒 MY NOTES: CLASE 9 (1/8/2025):
 Hoy vamos a trabajar con un archivo de jupyter
 
 
-# MY NOTES: CLASE 10 (1/10/2025):
+# 📒 MY NOTES: CLASE 10 (1/10/2025):
 Primera parte, continuaron con el notebook 4 (Analisis de los pinguinos).
 Segunda parte: Random Variables.
 Ver el codigo que escribieron los compañeros para resolver el ejercicio. Hay algunos muy interesantes.
 
-# MY NOTES: CLASE 11 (1/13/2025):
+# 📒 MY NOTES: CLASE 11 (1/13/2025):
 excalidraw es una pagina que permite hacer graficas
 tambien hay un plug inn que permite usarlo en codespace. 
 es lo que usa el profesor como pizarra.
 
 
-# MY NOTES: CLASE 12 (1/15/2025):
+# 📒 MY NOTES: CLASE 12 (1/15/2025):
 La clase de hoy veremos Hypothesis Testing
 crearemos una nueva rama para la clase de hoy
 JAMAS SE TRABAJA EN MAIN.
@@ -490,7 +541,7 @@ SE TRABAJA EN LAS RAMAS, Y LUEGO SE INTEGRAN EN MAIN
 Me fui en el corte.
 Repasar clase porque no entendi nada.
 
-# MY NOTES: CLASE 13 (1/17/2025):
+# 📒 MY NOTES: CLASE 13 (1/17/2025):
 No estuve en esta clase, pero vi la grabacion hasta el minuto 28 aprox.
 Y fui colocando las notas en el notebook 07_algorithm_optimization
 Continuar hasta finalizar la clase.
@@ -502,9 +553,14 @@ Imagenes que compartio el profesor por Slack:
 
 ![alt text](<image (3).png>)
 
-# MY NOTES: CLASE 14 (1/20/2025):
+# 📒 MY NOTES: CLASE 14 (1/20/2025):
 Hoy veremos Machine Learning Operations (MLOPS)
 Trabajaremos en el Notebook 08_MLOPS
 Me fui casi al principio de la clase.
 No integre la rama 08 a la main. Asi que en esta rama estan los ultimos updates.
 escuchar la grabacion y completar, para luego integrar.
+
+# 📒 MY NOTES: CLASE 15 (1/22/2025):
+Hoy veremos SQL. 
+
+No tome notas ni hice nada. Ver grabacion.
