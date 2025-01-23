@@ -561,6 +561,6 @@ No integre la rama 08 a la main. Asi que en esta rama estan los ultimos updates.
 escuchar la grabacion y completar, para luego integrar.
 
 # 📒 MY NOTES: CLASE 15 (1/22/2025):
-Hoy veremos SQL. 
+Hoy veremos SQL. Se trabajara en un notebook que comparitio el profesor por Slack, y que se renombro como 09_SQL. 
 
 No tome notas ni hice nada. Ver grabacion.
