@@ -578,3 +578,4 @@ Hoy vimos Web Scrapping. Lo mire en la tablet. Ver grabacion y hacer lo que diga
 # 📒 MY NOTES: CLASE 17 (1/27/2025):
 Hoy vimos API Requests (Res API). Establece una comunicacion entre dos aplicaciones. Sirve para comunicar un sistema con otro. Es como un mozo, de un restaurante donde los clientes hablan español, y los empleados de la cocina habla chino. Eso es lo que hace una api. Con el formato Json. 
 Escuchar y anotar.
+ME FUI MUY TEMPRANO CON BENJA. 
