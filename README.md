@@ -12,17 +12,17 @@ El # significa titulo. El ## Subtiluto. Y asi en adelante.
 
 2. Primero, creamos nuestro entorno virtual llamado "venv"
 
-        "python -m":    indica que cargue el modulo de python
+"python -m":    indica que cargue el modulo de python
 
-        "venv":         genera la carpeta "venv" donde se va a cargar ese modulo
+"venv":         genera la carpeta "venv" donde se va a cargar ese modulo
 
-        ".venv":        Como es una carpeta de sistema la idea es que este oculta. 
+".venv":        Como es una carpeta de sistema la idea es que este oculta. 
 
-        En lynux, que es el sistema operativo que tienen las maquinas virtuales de codespace, todo lo que empieza con "." son archivos o carpetas ocultos. 
+En lynux, que es el sistema operativo que tienen las maquinas virtuales de codespace, todo lo que empieza con "." son archivos o carpetas ocultos. 
           
-```bash
-        python -m venv .venv
-```
+        ```bash
+                python -m venv .venv
+        ```
 
    2DO: Lo activamos. Sabemos que quedo activado al ver que en la terminal la linea de comandos comienza con "(.venv)"
         "source": Comando utilizado para ejecutar / correr un script de bash. Puede terminar en sh
@@ -574,3 +574,7 @@ No tome notas ni hice nada. Ver grabacion.
 
 # 📒 MY NOTES: CLASE 16 (1/24/2025):
 Hoy vimos Web Scrapping. Lo mire en la tablet. Ver grabacion y hacer lo que diga.
+
+# 📒 MY NOTES: CLASE 17 (1/27/2025):
+Hoy vimos API Requests (Res API). Establece una comunicacion entre dos aplicaciones. Sirve para comunicar un sistema con otro. Es como un mozo, de un restaurante donde los clientes hablan español, y los empleados de la cocina habla chino. Eso es lo que hace una api. Con el formato Json. 
+Escuchar y anotar.
