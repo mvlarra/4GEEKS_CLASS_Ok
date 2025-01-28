@@ -10,12 +10,15 @@ El # significa titulo. El ## Subtiluto. Y asi en adelante.
 
 1. Ir a Extenciones, e instalar python y jupyter
 
-2. 1RO: Creamos nuestro entorno virtual llamado "venv"
+2. Primero, creamos nuestro entorno virtual llamado "venv"
+
         "python -m":    indica que cargue el modulo de python
+
         "venv":         genera la carpeta "venv" donde se va a cargar ese modulo
+
         ".venv":        Como es una carpeta de sistema la idea es que este oculta. 
-                        En lynux, que es el sistema operativo que tienen las maquinas virtuales de codespace, 
-                        todo lo que empieza con "." son archivos o carpetas ocultos. 
+
+        En lynux, que es el sistema operativo que tienen las maquinas virtuales de codespace, todo lo que empieza con "." son archivos o carpetas ocultos. 
           
 ```bash
         python -m venv .venv
@@ -28,13 +31,18 @@ El # significa titulo. El ## Subtiluto. Y asi en adelante.
         source .venv/bin/activate
 ```
 
-3. Crear el archivo gitignore,
-        Para evitar que git haga tracking de la carpeta del entorno virtual, Ya que nosotros queremos que git haga seguimiento de codigo, y no de paquetes.
-        Para esto es necesario agregar manualmente estas dos lineas en el archivo:
-                Linea 1: .venv          # Nombre de la carpeta que NO queremos que se haga tracking. Esta carpeta es un entorno virtual.
-                Linea 2: .env           # Nombre de la carpeta donde guardaremos variables de entorno cuando las necesitemos.
+3. Crear el archivo gitignore:
 
-        Otra forma de crear el archivo gitignore, es con el comando echo, que lo crea y le carga ambas lineas dentro:
+Para evitar que git haga tracking de la carpeta del entorno virtual, Ya que nosotros queremos que git haga seguimiento de codigo, y no de paquetes.
+Para esto es necesario agregar manualmente estas dos lineas en el archivo:
+        
+Linea 1: .venv          
+Nombre de la carpeta que NO queremos que se haga tracking. Esta carpeta es un entorno virtual.
+        
+Linea 2: .env           
+Nombre de la carpeta donde guardaremos variables de entorno cuando las necesitemos.
+
+Otra forma de crear el archivo gitignore, es con el comando echo, que lo crea y le carga ambas lineas dentro:
 
 ```bash
                 echo -e ".venv\n.env" > gitignore
@@ -123,24 +131,23 @@ IMPORTANTE:
 5. git status 
         Esto debe decir algo como "Your branch is up to date with 'origin/02_Github'. nothing to commit, working tree clean" indicando que todo esta subido.
 
-
-
-x. con "ls" que viene a significar lista, listo todos los archivos y carpetas que hay en mi directorio. Las carpetas las pinta de verde.
-x. con "ls -a" (a de all) tambien habilito a listar los archivos ocultos.
-x. con "pwd" imprimo el directorio de trabajo actual, o sea, donde estoy parado. pwd = print working directory
-x. con "cat" vemos el arvhivo readme en la terminal.
-x. con "clear" borra lineas del terminal
-x. con "touch name" para crear un archivo.
-x. con "echo texto" imprimo texto en la terminal
-x. con "echo ... > ..." agrega el texto de la izquierda en el archivod de la derecha
-x. añadir mas texto: "echo ... >> ..." agrega el texto de la izquierda al file de la derecha. 
-x. para agregar texto con salto de linea"echo -e "Linea1\nLinea2"
-x. es util usar echo para generar el archivo gitignore echo -e ".venv\n.env" > gitignore
-x. git branch para saber la rama donde estoy parado.
-x. git checkout nos sirve para movernos de rama en rama. Con el -b creo esa rama y me muevo para alli
-x. rm -rf nombre de la carpeta borra la carpeta
-x. mkdir -p (make directory) p = parents  para crear carpeta y subdirectorios data/{raw,baking,final}
-x. git status para ver que esta sin commit
+## COMANDOS:
+1. con "ls" que viene a significar lista, listo todos los archivos y carpetas que hay en mi directorio. Las carpetas las pinta de verde.
+2. con "ls -a" (a de all) tambien habilito a listar los archivos ocultos.
+3. con "pwd" imprimo el directorio de trabajo actual, o sea, donde estoy parado. pwd = print working directory
+4. con "cat" vemos el arvhivo readme en la terminal.
+5. con "clear" borra lineas del terminal
+6. con "touch name" para crear un archivo.
+7. con "echo texto" imprimo texto en la terminal
+8. con "echo ... > ..." agrega el texto de la izquierda en el archivod de la derecha
+9. añadir mas texto: "echo ... >> ..." agrega el texto de la izquierda al file de la derecha. 
+10. para agregar texto con salto de linea"echo -e "Linea1\nLinea2"
+11. es util usar echo para generar el archivo gitignore echo -e ".venv\n.env" > gitignore
+12. git branch para saber la rama donde estoy parado.
+13. git checkout nos sirve para movernos de rama en rama. Con el -b creo esa rama y me muevo para alli
+14. rm -rf nombre de la carpeta borra la carpeta
+15. mkdir -p (make directory) p = parents  para crear carpeta y subdirectorios data/{raw,baking,final}
+16. git status para ver que esta sin commit
 
 
 "```" backtick se llama este simbolo que sirve para poner un bloque de codigo. 
