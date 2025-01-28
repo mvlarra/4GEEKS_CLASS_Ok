@@ -562,5 +562,8 @@ escuchar la grabacion y completar, para luego integrar.
 
 # 📒 MY NOTES: CLASE 15 (1/22/2025):
 Hoy veremos SQL. Se trabajara en un notebook que comparitio el profesor por Slack, y que se renombro como 09_SQL. 
-
 No tome notas ni hice nada. Ver grabacion.
+
+
+# 📒 MY NOTES: CLASE 16 (1/24/2025):
+Hoy vimos Web Scrapping. Lo mire en la tablet. Ver grabacion y hacer lo que diga.
