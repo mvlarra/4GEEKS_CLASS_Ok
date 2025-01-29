@@ -1,5 +1,6 @@
 asttokens==3.0.0
 attrs==24.3.0
+beautifulsoup4==4.12.3
 certifi==2024.12.14
 charset-normalizer==3.4.1
 click==8.1.8
@@ -53,6 +54,7 @@ scikit-learn==1.6.0
 scipy==1.15.0
 seaborn==0.13.2
 six==1.17.0
+soupsieve==2.6
 stack-data==0.6.3
 tenacity==9.0.0
 threadpoolctl==3.5.0
