@@ -580,3 +580,7 @@ Hoy vimos API Requests (Res API). Establece una comunicacion entre dos aplicacio
 Escuchar y anotar.
 ME FUI MUY TEMPRANO CON BENJA. 
 SINCRONICE LA RAMA 11_API AL MAIN Y LUEGO LA BORRE. TRABAJAR ESTA CLASE DESDE EL MAIN DIRECTAMENTE.
+
+
+# 📒 MY NOTES: CLASE 18 (1/29/2025):
+No pude entrar a la clase. Parrillero Martin.
