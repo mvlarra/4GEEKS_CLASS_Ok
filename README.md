@@ -583,4 +583,7 @@ SINCRONICE LA RAMA 11_API AL MAIN Y LUEGO LA BORRE. TRABAJAR ESTA CLASE DESDE EL
 
 
 # 📒 MY NOTES: CLASE 18 (1/29/2025):
-No pude entrar a la clase. Parrillero Martin.
+No pude entrar a la clase. Parrillero Martin. Subi el notebook de Naielly que lo compartio por slack
+
+# 📒 MY NOTES: CLASE 19 (1/31/2025):
+Hoy vamos a empezar con Machine learning
